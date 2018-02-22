@@ -1,0 +1,27 @@
+{
+  "name": "amnis",
+  "version": "1.0.0",
+  "description": "Minimal yet complete state and effect management solution for JavaScript applications",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.m.js",
+  "jsnext:main": "dist/index.m.js",
+  "unpkg": "dist/index.umd.js",
+  "jsdelivr": "dist/index.umd.js",
+  "scripts": {
+    "build": "yarn run build:cjs:es && yarn run build:umd:dev && yarn run build:umd:prod",
+    "build:cjs:es": "microbundle --format cjs,es",
+    "build:umd:dev": "microbundle --format umd --compress false",
+    "build:umd:prod": "microbundle --format umd -o dist/index.min.js --compress true"
+  },
+  "author": "Peter Shev <piotrsevcenco@gmail.com> (http://petershev.com/)",
+  "license": "MIT",
+  "peerDependencies": {
+    "stream-lite": ">=3.0.0"
+  },
+  "devDependencies": {
+    "map-values": "^1.0.0",
+    "microbundle": "0.4.4",
+    "stream-lite": "3.1.0"
+  }
+}
