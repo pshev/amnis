@@ -14,8 +14,16 @@
     "build:umd:dev": "microbundle --format umd --compress false",
     "build:umd:prod": "microbundle --format umd -o dist/index.min.js --compress true"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pshev/amnis.git"
+  },
   "author": "Peter Shev <piotrsevcenco@gmail.com> (http://petershev.com/)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pshev/amnis/issues"
+  },
+  "homepage": "https://github.com/pshev/amnis",
   "peerDependencies": {
     "stream-lite": ">=3.0.0"
   },

@@ -1,6 +1,4 @@
-
-
-<p align="center" style="margin-top: 15px">
+<p align="center" style="margin-top: 25px">
   <strong>Minimal yet complete state and effect management solution</strong>
 </p>
 
