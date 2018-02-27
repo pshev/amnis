@@ -384,8 +384,8 @@ duplexer@^0.1.1:
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
 
 electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.30:
-  version "1.3.33"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.33.tgz#bf00703d62a7c65238136578c352d6c5c042a545"
+  version "1.3.34"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.34.tgz#d93498f40391bb0c16a603d8241b9951404157ed"
 
 emojis-list@^2.0.0:
   version "2.1.0"
@@ -1409,8 +1409,8 @@ rollup-plugin-nodent@^0.2.2:
     rollup-pluginutils "^2.0.1"
 
 rollup-plugin-postcss@^1.2.7:
-  version "1.2.8"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-postcss/-/rollup-plugin-postcss-1.2.8.tgz#3389f4235521cd6a019ab6316cadccb0046c11f3"
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-postcss/-/rollup-plugin-postcss-1.3.0.tgz#b394f628e29c0e3130c76ce2e0d1feec4d2c2a56"
   dependencies:
     chalk "^2.0.0"
     concat-with-sourcemaps "^1.0.5"
@@ -1422,8 +1422,9 @@ rollup-plugin-postcss@^1.2.7:
     postcss-modules "^1.1.0"
     promise.series "^0.2.0"
     reserved-words "^0.1.2"
+    resolve "^1.5.0"
     rollup-pluginutils "^2.0.1"
-    style-inject "^0.2.0"
+    style-inject "^0.3.0"
 
 rollup-plugin-preserve-shebang@^0.1.6:
   version "0.1.6"
@@ -1506,9 +1507,11 @@ sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
 
-stream-lite@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/stream-lite/-/stream-lite-3.1.0.tgz#494bb4ca0e274c864e3d3fbcd2c5a6e7a2ccd6bc"
+stream-lite@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/stream-lite/-/stream-lite-3.2.0.tgz#3e1cac353fee78c74b4d1fbf9f4aa558ba976136"
+  dependencies:
+    symbol-observable "1.2.0"
 
 strict-uri-encode@^1.0.0:
   version "1.1.0"
@@ -1524,9 +1527,9 @@ strip-ansi@^3.0.0:
   dependencies:
     ansi-regex "^2.0.0"
 
-style-inject@^0.2.0:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/style-inject/-/style-inject-0.2.1.tgz#0cac933812c2693820d0351202aad0b36da78cb8"
+style-inject@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/style-inject/-/style-inject-0.3.0.tgz#d21c477affec91811cc82355832a700d22bf8dd3"
 
 supports-color@^2.0.0:
   version "2.0.0"
@@ -1555,6 +1558,10 @@ svgo@^0.7.0:
     mkdirp "~0.5.1"
     sax "~1.2.1"
     whet.extend "~0.9.9"
+
+symbol-observable@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
 tslib@^1.9.0:
   version "1.9.0"
