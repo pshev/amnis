@@ -92,8 +92,8 @@ First - reducer is not relevant for this example.
 <br />
 Second - we use `stream-lite` library to work with observables [but you don't have to](#adapters).
 ```js
- import {createStore, combineEffects, runEffects, ofType} from 'amnis'
- import {tap, switchMap, mapTo} from 'stream-lite/operators'
+ import {createStore, runEffects} from 'amnis'
+ import {filter, tap, switchMap, mapTo} from 'stream-lite/operators'
  import {never} from 'stream-lite/statics'
   
  const logAll = action$ => action$.pipe(
@@ -102,26 +102,40 @@ Second - we use `stream-lite` library to work with observables [but you don't ha
  )
  
  const pong = action$ => action$.pipe(
-	 ofType('PING'),
+	 filter(a => a.type === 'PING'),
 	 mapTo(({type: 'PONG'})),
  )
  
  const rootReducer = (state, action) => 'irrelevant'
  
  const store = createStore(rootReducer)
- 
- runEffects(store, combineEffects(logAll, pong))
+
+runEffects({
+  store,  
+  effects: [logAll, pong]
+})
  
  store.dispatch({type: 'PING'})
 ```
 
 ## <a id="adapters"></a> 🚀 Choose your own observable library
 
-Internally `amnis` uses `stream-lite`. Mostly because it's core is only ***900KB***, but also because of it's RxJS-like interface and support for [pipeable operators](https://github.com/ReactiveX/rxjs/blob/master/doc/pipeable-operators.md).
+Internally `amnis` uses `stream-lite`. Mostly because it's core is only about ***1KB***, but also because of it's RxJS-like interface and support for [pipeable operators](https://github.com/ReactiveX/rxjs/blob/master/doc/pipeable-operators.md).
 <br/>
 But you can use any observable library that you want!
 <br/>
-Lies! I will actually push this functionality in the next release 🙃
+The observables that Amnis returns implement a `[Symbol.observable]` method as per [Observable proposal specification](https://github.com/tc39/proposal-observable). 
+<br/>
+All you need to do is supply `runEffects` with a function it can use to convert a standard observable to an observable of your favorite library:
+```js  
+import {from} from 'rxjs/observable/from'
+
+runEffects({  
+  store,  
+  effects: [logAll, pong],  
+  adapter: from
+})
+```
 
 ## 📓 Examples
 Stay tuned. Examples are coming.
