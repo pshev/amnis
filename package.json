@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/pshev/amnis",
   "peerDependencies": {
-    "stream-lite": ">=3.0.0"
+    "stream-lite": ">=3.2.0"
   },
   "devDependencies": {
     "map-values": "^1.0.0",
