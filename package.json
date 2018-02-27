@@ -24,9 +24,6 @@
     "url": "https://github.com/pshev/amnis/issues"
   },
   "homepage": "https://github.com/pshev/amnis",
-  "peerDependencies": {
-    "stream-lite": ">=3.2.0"
-  },
   "devDependencies": {
     "map-values": "^1.0.0",
     "microbundle": "0.4.4",
