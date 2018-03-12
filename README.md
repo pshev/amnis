@@ -15,13 +15,12 @@ We know of a great way to model asynchronous actions - that is with [`Observable
 ```js
 // pseudo code
 const state$ = action$
-  .startWith(initialState)
-  .scan(rootReducer)
+  .scan(rootReducer, initialState)
 ```
 This is not a new idea and many different proposals have been made that replace `redux` with something like `rxjs`. However they usually require you to completely change the way you write your redux applications. For example you would have to write `actions` and `reducers` as observables, while they are better of staying as pure simple functions. Those approaches are also usually tied to a specific observable library, like `rxjs` which introduces bloat into your application.
 <br />
 <br />
-With `amnis` you get to write your redux applications like you're used to. Except without `redux`. Create your `store`, `actions`, and `reducers` like you always have. But then use [any observable library](#adapters) where it makes sense - for effect management. Better yet, you get all of that in ***1.5KB gzipped***.
+With `amnis` you get to write your redux applications like you're used to. Except without `redux`. Create your `store`, `actions`, and `reducers` like you always have. But then use [any observable library](#adapters) where it makes sense - for effect management. Better yet, you get all of that in ***1.7KB gzipped***.
 
 ## 🔧 Installation
 
@@ -55,7 +54,7 @@ export function counter(state = 0, action) {
 ```
 Then you create a `store`
 <br/>
-`createStore` accepts the rootReducer, an optional initialState parameter, and an optional 3rd parameter - an [adapter](#adapters) for you to use any observable library that you want.
+`createStore` accepts the rootReducer and an optional initialState parameter.
 <br/>
 There is no concept of middleware in Amnis since there is no need for it.
 
