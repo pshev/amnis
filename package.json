@@ -27,6 +27,6 @@
   "devDependencies": {
     "map-values": "^1.0.0",
     "microbundle": "0.4.4",
-    "stream-lite": "3.2.0"
+    "stream-lite": "4.0.0"
   }
 }

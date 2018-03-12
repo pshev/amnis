@@ -1507,9 +1507,9 @@ sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
 
-stream-lite@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/stream-lite/-/stream-lite-3.2.0.tgz#3e1cac353fee78c74b4d1fbf9f4aa558ba976136"
+stream-lite@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/stream-lite/-/stream-lite-4.0.0.tgz#6a66eeb5f17abf4ab6eb235332cb46d61934e60b"
   dependencies:
     symbol-observable "1.2.0"
 
