@@ -1,6 +1,6 @@
 {
   "name": "amnis",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Minimal yet complete state and effect management solution for JavaScript applications",
   "source": "src/index.js",
   "main": "dist/index.js",
